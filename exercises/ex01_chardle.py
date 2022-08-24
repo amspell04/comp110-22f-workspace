@@ -18,6 +18,7 @@ if len(single_character) > 1:
     exit()
 if len(single_character) < 1:
     print("Error: Character must be a single character.")
+    exit()
 
 print("Searching for " + single_character + " in " + five_letter_word)
 
@@ -26,6 +27,11 @@ if five_letter_word == "hello":
         print("e found at index 1")
         count_match + 1
         print("1 instance of e found in hello")
+    if single_character == "l":
+        print("l found at index 2")
+        print("l found at index 3")
+        count_match + 2
+        print("2 instances of l found in hello")
 
 if five_letter_word == "heels":
     if single_character == "s":
@@ -41,8 +47,6 @@ if five_letter_word == "heels":
         print("h found at index 0")
         count_match + 1
         print("1 instance of h in heels")
-
     if single_character == "d":
         count_match
         print("No instances of d found in heels")
-
