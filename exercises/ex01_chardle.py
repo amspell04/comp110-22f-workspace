@@ -2,7 +2,7 @@
 
 __author__ = "730560818"
 
-count_match: int = 0
+match_indices: int = 0 
 
 five_letter_word: str = str(input("Enter a 5-character word: "))
 if len(five_letter_word) > 5:
@@ -22,31 +22,42 @@ if len(single_character) < 1:
 
 print("Searching for " + single_character + " in " + five_letter_word)
 
-if five_letter_word == "hello":
-    if single_character == "e":
-        print("e found at index 1")
-        count_match + 1
-        print("1 instance of e found in hello")
-    if single_character == "l":
-        print("l found at index 2")
-        print("l found at index 3")
-        count_match + 2
-        print("2 instances of l found in hello")
 
-if five_letter_word == "heels":
-    if single_character == "s":
-        print("s found at index 4")
-        count_match + 1
-        print("2 instances of s found in heels")
-    if single_character == "e":
-        print("e found at index 1")
-        print("e found at index 2")
-        count_match + 2
-        print("2 instances of e found in heels")
-    if single_character == "h":
-        print("h found at index 0")
-        count_match + 1
-        print("1 instance of h in heels")
-    if single_character == "d":
-        count_match
-        print("No instances of d found in heels")
+if single_character == five_letter_word[0]:
+    print(single_character + " found at index 0")
+    match_indices += 1
+
+if single_character == five_letter_word[1]:
+    print(single_character + " found at index 1")
+    match_indices += 1
+
+if single_character == five_letter_word[2]:
+    print(single_character + " found at index 2")
+    match_indices += 1
+
+if single_character == five_letter_word[3]:
+    print(single_character + " found at index 3")
+    match_indices += 1
+
+if single_character == five_letter_word[4]:
+    print(single_character + " found at index 4")
+    match_indices += 1
+
+
+if match_indices == 0:
+    print("No instances of " + single_character + " found in " + five_letter_word)
+
+if match_indices == 1:
+    print("1 instance of " + single_character + " found in " + five_letter_word)
+
+if match_indices == 2:
+    print("2 instances of " + single_character + " found in " + five_letter_word)
+
+if match_indices == 3:
+    print("3 instances of " + single_character + " found in " + five_letter_word)
+
+if match_indices == 4:
+    print("4 instances of " + single_character + " found in " + five_letter_word)
+
+if match_indices == 5:
+    print("5 instances of " + single_character + " found in " + five_letter_word)
