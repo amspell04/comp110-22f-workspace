@@ -1,21 +1,25 @@
-"""Doct string here :)"""
+"""Creating 3 functions!"""
 
 __author__ = "730560818"
 
-def all(list:str, single:int) -> bool:
-    all = True
+
+def all(list: list[int], single: int) -> bool:
+    """This function determines whether the intergers in a list are equal to the singular given int."""
     i: int = 0
+    if len(list) == 0:
+        return False
     while i < len(list):
         if list[i] != single:
-            all = False
-            return all
+            return False
         if list[i] == single:
             i += 1
-    return all
+    return True
        
+
 def max(input: list[int]) -> int:
+    """This function tests each index of a list and returns the largest int."""
     idx: int = 0
-    alt: int = 1
+    alt: int = 0
     if len(input) == 0:
         raise ValueError("max() arg is an empty list")
     while idx < len(input):
@@ -28,8 +32,14 @@ def max(input: list[int]) -> int:
         idx += 1
     return max
 
-def is_equal(list_1:str, list_2:str) -> bool:
-    if list_1 == list_2:
-        return True
-    if list_1 != list_2:
+
+def is_equal(list_1: str, list_2: str) -> bool:
+    """This function determines whether list_1 is completely equal list_2 based on their indices."""
+    a: int = 0
+    b: int = 0
+    if list_1[a] == list_2[b]:
+        a += 1
+        b += 1
+    if list_1[a] != list_2[b]:
         return False
+    return True
