@@ -38,10 +38,3 @@ def challenge_one(chance: int) -> None:
             chance = 0
     print(response)
     print(point_tracker)
-
-
-def challenge_two(chance: int) -> None:
-
-
-def fun_challenge() -> None:
-     
