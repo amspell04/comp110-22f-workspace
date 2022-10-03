@@ -33,13 +33,17 @@ def max(input: list[int]) -> int:
     return max
 
 
-def is_equal(list_1: str, list_2: str) -> bool:
+def is_equal(list_1: list[int], list_2: list[int]) -> bool:
     """This function determines whether list_1 is completely equal list_2 based on their indices."""
     a: int = 0
-    b: int = 0
-    if list_1[a] == list_2[b]:
-        a += 1
-        b += 1
-    if list_1[a] != list_2[b]:
+    if len(list_1) != len(list_2):
         return False
+    if a == len(list_1) and len(list_2):
+        if len(list_1) and len(list_2) == 0:
+            return True
+    while a < len(list_1) and len(list_2):            
+        if list_1[a] == list_2[a]:
+            a += 1
+        else:
+            return False
     return True
